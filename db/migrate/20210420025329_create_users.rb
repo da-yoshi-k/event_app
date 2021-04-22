@@ -7,5 +7,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :image_url, null: false
       t.timestamps
     end
+
+    add_index :users, %i[provider uid], unipue: true
   end
 end
