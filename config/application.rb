@@ -31,5 +31,8 @@ module AwesomeEvents
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
     config.active_storage.variant_processor = :vips
+    config.action_dispath.rescue_responses.merge!(
+      "YourNewException" => :not_found
+    )
   end
 end
